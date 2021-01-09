@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <!--
   This is a simple example / template impress.js slide show. The goal is to be
@@ -17,75 +17,288 @@
 -->
 
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>A Study in 3D Rotations| by Henrik Ingo @henrikingo</title>
     <meta name="description" content="Explore impress.js in 3D" />
     <meta name="author" content="Henrik Ingo" />
-    <link href="./css/impress-common.css" rel="stylesheet" />
+    <link href="./static/css/impress-common.css" rel="stylesheet" />
     <link href="./static/css/3D-rotations.css" rel="stylesheet" />
-</head>
+    <link href="./static/css3-photo/index.css" rel="stylesheet" />
+    <link href="./static/css/tailwind.css" rel="stylesheet" />
+  </head>
 
-<body class="impress-not-supported">
-
-<div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
-</div>
-
-<div id="impress" data-transition-duration="2000">
-
-    <div id="overview" class="step overview" data-x="1350" data-y="100" data-z="100" data-scale="3" data-rotate-y="90">
-         <h1>A Study in 3D Rotations</h1>
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+      <p>
+        Your browser <b>doesn't support the features required</b> by impress.js,
+        so you are presented with a simplified version of this presentation.
+      </p>
+      <p>
+        For the best experience please use the latest <b>Chrome</b>,
+        <b>Safari</b> or <b>Firefox</b> browser.
+      </p>
     </div>
 
-    <div id="overview2" class="step overview" data-x="2018" data-y="106" data-z="3018" data-scale="2">
-         <p>Unlike the <code>x/y/z</code> coordinates (aka translations), the <code>rotate-x/y/z</code> rotations are applied in a 
-         specific order, and order matters. This demo presentation exhibits the use of the new <code>data-rotate- order</code> attribute.
-         Instead of the default "xyz" order, the steps use the reversed <em>"zyx"</em> order in applying rotations around each axis.
-         Some of the steps (<a href="#step-3">3</a> &amp; <a href="#step-7">7</a>), are in positions that are not possible with the default "xyz" order.</p>
-    </div>
+    <div id="impress" data-transition-duration="2000">
+      <div
+        id="overview"
+        class="step overview"
+        data-x="1350"
+        data-y="100"
+        data-z="100"
+        data-scale="3"
+        data-rotate-y="90"
+      >
+        <h1>个人主页</h1>
+        <p class="text-center text-3xl">季辛茹</p>
+        <p class="text-center text-base">2021-01-09</p>
+      </div>
 
-    <div id="step-1" class="step" data-x="0" data-y="0" data-z="0"
-         data-goto-prev="step-8">
-        <p>Slide one</p>
-    </div>
+      <div
+        id="overview2"
+        class="step overview"
+        data-x="2018"
+        data-y="106"
+        data-z="3018"
+        data-scale="2"
+      >
+        <div class="grid grid-cols-2">
+          <span>姓名：</span> <span>季辛茹</span>
+        </div>
+        <div class="grid grid-cols-2">
+          <span>学校：</span> <span>淮北师范大学</span>
+        </div>
+        <div class="grid grid-cols-2">
+          <span>学号：</span> <span>20180109023</span>
+        </div>
+        <div class="grid grid-cols-2">
+          <span>爱好：</span> <span>看电影，逛街，跳舞</span>
+        </div>
+        <div class="grid grid-cols-2">
+          <span>性格：</span> <span>文文静静，可可爱爱</span>
+        </div>
+      </div>
 
-    <div id="step-2" class="step" data-x="420" data-y="-70" data-z="-250" data-rotate-z="45" data-rotate-y="-45" data-rotate-order="zyx">
-        <p>Slide two</p>
-    </div>
+      <div id="photo-wall" class="step overview">
+        <div class="container">
+          <div class="cube">
+            <!-- 外面立方体开始 -->
+            <div class="out_front">
+              <img src="./static/css3-photo/images/1.png" class="out_pic" />
+            </div>
+            <div class="out_back">
+              <img src="./static/css3-photo/images/2.png" class="out_pic" />
+            </div>
+            <div class="out_left">
+              <img src="./static/css3-photo/images/3.png" class="out_pic" />
+            </div>
+            <div class="out_right">
+              <img src="./static/css3-photo/images/4.png" class="out_pic" />
+            </div>
+            <div class="out_top">
+              <img src="./static/css3-photo/images/5.png" class="out_pic" />
+            </div>
+            <div class="out_bottom">
+              <img src="./static/css3-photo/images/6.png" class="out_pic" />
+            </div>
+            <!-- 外面立方体结束 -->
+            <!-- 里面立方体开始 -->
+            <div class="in_front" id="small">
+              <img src="./static/css3-photo/images/7.png" class="in_pic" />
+            </div>
+            <div class="in_back" id="small">
+              <img src="./static/css3-photo/images/8.png" class="in_pic" />
+            </div>
+            <div class="in_left" id="small">
+              <img src="./static/css3-photo/images/9.png" class="in_pic" />
+            </div>
+            <div class="in_right" id="small">
+              <img src="./static/css3-photo/images/10.png" class="in_pic" />
+            </div>
+            <div class="in_top" id="small">
+              <img src="./static/css3-photo/images/11.png" class="in_pic" />
+            </div>
+            <div class="in_bottom" id="small">
+              <img src="./static/css3-photo/images/12.png" class="in_pic" />
+            </div>
+            <!-- 里面立方体结束 -->
+          </div>
+        </div>
+      </div>
 
-    <div id="step-3" class="step" data-x="700" data-y="350" data-z="-350" data-rotate-z="90" data-rotate-y="-90" data-rotate-order="zyx">
-        <p>Slide three</p>
-    </div>
+      <div
+        id="step-1"
+        class="step"
+        data-x="0"
+        data-y="0"
+        data-z="0"
+        data-goto-prev="step-8"
+      >
+        <h3>我的朋友</h3>
+        <div class="text-sm mb-10">
+          我和这几位朋友在大学期间一直相互陪伴、共同进步，她们对于我来说是特殊的存在，在我从幼稚像成熟蜕变的过程中，是她们一直鼓励我，给我自信，让我成长。
+        </div>
+        <div class="flex flex-wrap">
+          <img
+            class="w-1/4 mr-10"
+            src="./static/images/friends/图片10.png"
+            alt=""
+          />
+          <img
+            class="w-1/4 mr-10"
+            src="./static/images/friends/图片11.png"
+            alt=""
+          />
+          <img
+            class="w-1/4 mr-10"
+            src="./static/images/friends/图片12.png"
+            alt=""
+          />
+          <img
+            class="w-1/4 mr-10"
+            src="./static/images/friends/图片13.png"
+            alt=""
+          />
+        </div>
+      </div>
 
-    <div id="step-4" class="step" data-x="422" data-y="780" data-z="-250" data-rotate-z="135" data-rotate-y="-135" data-rotate-order="zyx">
-        <p>Slide four</p>
-    </div>
+      <div
+        id="step-2"
+        class="step"
+        data-x="420"
+        data-y="-70"
+        data-z="-250"
+        data-rotate-z="45"
+        data-rotate-y="-45"
+        data-rotate-order="zyx"
+      >
+        <h3>我的大学</h3>
+        <div class="text-sm mb-10">
+          淮北师范大学（Huaibei Normal
+          University），简称淮北师大，是一所多科性省属重点大学。学校有两所校区，我住在滨湖校区，淮北民风淳朴，当地人对人特别友好。我在这里度过了两年多的时光，有许多难忘的回忆，这也是让我成长最多的地方，它为我提供了一个进步的平台。
+        </div>
+        <div class="flex flex-wrap">
+          <img
+            class="w-1/4 mr-10"
+            src="./static/images/university/图片14.png"
+            alt=""
+          />
+          <img
+            class="w-1/4 mr-10"
+            src="./static/images/university/图片15.png"
+            alt=""
+          />
+          <img
+            class="w-1/4 mr-10"
+            src="./static/images/university/图片16.png"
+            alt=""
+          />
+        </div>
+      </div>
 
-    <div id="step-5" class="step" data-x="0" data-y="702" data-z="0" data-rotate-z="180" data-rotate-y="-180" data-rotate-order="zyx">
+      <div
+        id="step-3"
+        class="step"
+        data-x="700"
+        data-y="350"
+        data-z="-350"
+        data-rotate-z="90"
+        data-rotate-y="-90"
+        data-rotate-order="zyx"
+      >
+        <h3>我的家人</h3>
+        <div class="text-sm mb-10">他们一直都全心全意的对我好，在成长的路上给予我无限的爱，没有他们怎么会有如此乐观积极的我呢？</div>
+        <div class="flex flex-wrap">
+          <img src="./static/images/family/图片17.png" alt="" class="w-1/4 mr-10 mb-8" />
+          <img src="./static/images/family/图片18.png" alt="" class="w-1/4 mr-10 mb-8" />
+          <img src="./static/images/family/图片19.png" alt="" class="w-1/4 mr-10 mb-8" />
+          <img src="./static/images/family/图片20.png" alt="" class="w-1/4 mr-10 mb-8" />
+        </div>
+      </div>
+
+      <div
+        id="step-4"
+        class="step"
+        data-x="422"
+        data-y="780"
+        data-z="-250"
+        data-rotate-z="135"
+        data-rotate-y="-135"
+        data-rotate-order="zyx"
+      >
+        <h3>我的宠物</h3>
+        <div class="text-sm mb-10">
+          它是我坐了很远的车从巢湖市到柘皋镇上一个很友善的阿姨那边买过来的，当时真的可爱到心都被萌化了，它现在已经长成一个可爱的大兔子了。
+        </div>
+        <div class="flex flex-wrap">
+          <img class="w-1/4 mr-10 mb-8" src="./static/images/pets/图片21.png" alt="">
+          <img class="w-1/4 mr-10 mb-8" src="./static/images/pets/图片22.png" alt="">
+          <img class="w-1/4 mr-10 mb-8" src="./static/images/pets/图片23.png" alt="">
+          <img class="w-1/4 mr-10 mb-8" src="./static/images/pets/图片24.png" alt="">
+        </div>
+      </div>
+
+      <div
+        id="step-5"
+        class="step"
+        data-x="0"
+        data-y="702"
+        data-z="0"
+        data-rotate-z="180"
+        data-rotate-y="-180"
+        data-rotate-order="zyx"
+      >
         <p>Slide five</p>
-    </div>
+      </div>
 
-    <div id="step-6" class="step" data-x="379" data-y="780" data-z="270" data-rotate-z="135" data-rotate-y="-225" data-rotate-order="zyx">
+      <div
+        id="step-6"
+        class="step"
+        data-x="379"
+        data-y="780"
+        data-z="270"
+        data-rotate-z="135"
+        data-rotate-y="-225"
+        data-rotate-order="zyx"
+      >
         <p>Slide six</p>
-    </div>
+      </div>
 
-    <div id="step-7" class="step" data-x="700" data-y="350" data-z="350" data-rotate-z="90" data-rotate-y="-270" data-rotate-order="zyx">
+      <div
+        id="step-7"
+        class="step"
+        data-x="700"
+        data-y="350"
+        data-z="350"
+        data-rotate-z="90"
+        data-rotate-y="-270"
+        data-rotate-order="zyx"
+      >
         <p>Slide seven</p>
-    </div>
+      </div>
 
-    <div id="step-8" class="step" data-x="379" data-y="-70" data-z="270" data-rotate-z="45" data-rotate-y="-315" data-rotate-order="zyx"
-         data-goto-next="step-1">
+      <div
+        id="step-8"
+        class="step"
+        data-x="379"
+        data-y="-70"
+        data-z="270"
+        data-rotate-z="45"
+        data-rotate-y="-315"
+        data-rotate-order="zyx"
+        data-goto-next="step-1"
+      >
         <p>Slide eight</p>
+      </div>
     </div>
-</div>
 
-<div id="impress-toolbar"></div>
-<div id="impress-help"></div>
+    <div id="impress-toolbar"></div>
+    <div id="impress-help"></div>
 
-<script type="text/javascript" src="./js/impress.js"></script>
-<script>impress().init();</script>
-
-</body>
+    <script type="text/javascript" src="./static/js/impress.js"></script>
+    <script>
+      impress().init();
+    </script>
+  </body>
 </html>
